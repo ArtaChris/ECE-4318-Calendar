@@ -7,7 +7,8 @@ import androidx.lifecycle.ViewModel
 class HomeViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "Why did the chicken cross the road? To get to the other side!"
+        value = "Calendar related functionality will go here. To access or change this text, go to"+
+                " java/edu.cpp4310.calclkrem/ui/home/HomeViewModel.kt."
     }
     val text: LiveData<String> = _text
 }

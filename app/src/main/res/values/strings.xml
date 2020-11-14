@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">Calendar Clock Reminder</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">Calendar</string>
+    <string name="title_dashboard">Clock</string>
+    <string name="title_notifications">Reminders</string>
+    <string name="button">Button</string>
+    <string name="floatingActionButton_Text">A floating button that allows the user to create a new input.</string>
+    <string name="reminders_FloatingActionButton_Text">A floating action button for the user to add inputs.</string>
+    <string name="togglebutton_Text">ToggleButton</string>
+    <string name="togglebutton_textOff">All reminders</string>
+    <string name="togglebutton_textOn">Upcoming reminders</string>
+    <string name="addReminder_textView1">TODO: Add functionality</string>
 </resources>

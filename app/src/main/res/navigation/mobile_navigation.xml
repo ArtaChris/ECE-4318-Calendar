@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="edu.cpp4310.calclkrem.ui.notifications.NotificationsFragment"
+        android:name="edu.cpp4310.calclkrem.ui.reminders.RemindersFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_reminders" />
 </navigation>
