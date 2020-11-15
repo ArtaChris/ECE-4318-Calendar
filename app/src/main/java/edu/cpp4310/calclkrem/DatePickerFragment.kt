@@ -27,8 +27,4 @@ class DatePickerFragment  : DialogFragment(), DatePickerDialog.OnDateSetListener
     override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
         // Nothing!
     }
-
-    fun getCalendar(): Calendar{
-        return Calendar.getInstance()
-    }
 }
