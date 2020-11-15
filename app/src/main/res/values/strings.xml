@@ -10,4 +10,11 @@
     <string name="togglebutton_textOff">All reminders</string>
     <string name="togglebutton_textOn">Upcoming reminders</string>
     <string name="addReminder_textView1">TODO: Add functionality</string>
+    <string name="addReminder_TitleTextBox_contentDescription">A text box to input the reminder\'s title.</string>
+    <string name="addReminder_TitleTextBox_Text">Title</string>
+    <string name="addReminder_TimeTextBox_ContentDescription">A text box to input time.</string>
+    <string name="addReminder_TimeButton_Text">Button</string>
+    <string name="addReminder_TitleTextBox_Hint">Title</string>
+    <string name="addReminder_TextView2_Text">On</string>
+    <string name="addReminder_RepeatsSwitch_Text">Repeats</string>
 </resources>

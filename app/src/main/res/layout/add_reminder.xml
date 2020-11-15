@@ -1,18 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView"
+    <EditText
+        android:id="@+id/addReminder_TitleTextBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="16dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hapticFeedbackEnabled="true"
+        android:hint="@string/addReminder_TitleTextBox_Hint"
+        android:inputType="text"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/addReminder_TitleTextBox_Text" />
+
+    <Button
+        android:id="@+id/addReminder_SetTimeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/addReminder_textView1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="16dp"
+        android:text="@string/addReminder_TimeButton_Text"
+        app:layout_constraintStart_toStartOf="@+id/addReminder_TitleTextBox"
+        app:layout_constraintTop_toBottomOf="@+id/addReminder_TitleTextBox"
+        tools:text="12:29 AM" />
+
+    <Button
+        android:id="@+id/addReminder_SetDateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/addReminder_TimeButton_Text"
+        app:layout_constraintStart_toStartOf="@+id/addReminder_SetTimeButton"
+        app:layout_constraintTop_toBottomOf="@+id/addReminder_SetTimeButton"
+        tools:text="Sunday, February 14 2021" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="CheckBox"
+        app:layout_constraintStart_toStartOf="@+id/addReminder_SetDateButton"
+        app:layout_constraintTop_toBottomOf="@+id/addReminder_SetDateButton" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
