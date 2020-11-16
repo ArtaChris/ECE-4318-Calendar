@@ -17,4 +17,24 @@
     <string name="addReminder_TitleTextBox_Hint">Title</string>
     <string name="addReminder_TextView2_Text">On</string>
     <string name="addReminder_RepeatsSwitch_Text">Repeats</string>
+    <string name="addReminder_RepeatsCheckBox_Text">This reminder repeats</string>
+    <string name="addReminder_RBDOW_Text">By day of week</string>
+    <string name="addReminder_RBNOD_Text">By number of days</string>
+    <string name="addReminder_RBNOW_Text">By number of weeks</string>
+    <string name="addReminder_RBNOM_Text">By number of months</string>
+    <string name="addReminder_RBNOY_Text">By number of years</string>
+    <string name="addReminder_SubmitButton_Text">Submit Reminder</string>
+    <string name="addReminder_ChipM_Text">M</string>
+    <string name="addReminder_ChipTu_Text">Tu</string>
+    <string name="addReminder_ChipW_Text">W</string>
+    <string name="addReminder_ChipTh_Text">Th</string>
+    <string name="addReminder_ChipF_Text">F</string>
+    <string name="addReminder_ChipSa_Text">Sa</string>
+    <string name="addReminder_ChipSu_Text">Su</string>
+    <string name="addReminder_RepeatsEveryText">Every</string>
+    <string name="_2">2</string>
+    <string name="days">Days</string>
+    <string name="weeks">Weeks</string>
+    <string name="months">Months</string>
+    <string name="years">Years</string>
 </resources>
