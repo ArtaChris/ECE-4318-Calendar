@@ -46,7 +46,7 @@
         tools:text="Sunday, February 14 2021" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/addReminder_repeatingCheckBox"
         android:onClick="onCheckboxClicked"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -63,14 +63,15 @@
         android:layout_marginBottom="16dp"
         android:text="@string/addReminder_SubmitButton_Text"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="onClick"/>
 
     <RadioGroup
         android:id="@+id/addReminder_RadioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@+id/checkBox"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox">
+        app:layout_constraintStart_toStartOf="@+id/addReminder_repeatingCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/addReminder_repeatingCheckBox">
 
         <RadioButton
             android:id="@+id/addReminder_RBDOW"
@@ -118,6 +119,7 @@
         app:layout_constraintTop_toBottomOf="@+id/addReminder_RadioGroup">
 
         <com.google.android.material.chip.ChipGroup
+            android:id="@+id/addReminder_ChipGroup"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:singleLine="true">

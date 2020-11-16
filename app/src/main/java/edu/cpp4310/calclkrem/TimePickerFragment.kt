@@ -21,7 +21,9 @@ class TimePickerFragment  : DialogFragment(), TimePickerDialog.OnTimeSetListener
                 minute, android.text.format.DateFormat.is24HourFormat(activity))
     }
 
-    override fun onTimeSet(view: TimePicker?, hourOfDay: Int, minute: Int) {
 
+
+    override fun onTimeSet(view: TimePicker?, hourOfDay: Int, minute: Int) {
+        // Nothing!
     }
 }

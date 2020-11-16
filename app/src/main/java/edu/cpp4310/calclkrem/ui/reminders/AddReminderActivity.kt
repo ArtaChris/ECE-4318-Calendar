@@ -16,7 +16,13 @@ import edu.cpp4310.calclkrem.TimePickerFragment
 import java.text.SimpleDateFormat
 import java.util.*
 
-class AddReminderActivity: AppCompatActivity(), TimePickerDialog.OnTimeSetListener, DatePickerDialog.OnDateSetListener {
+class AddReminderActivity: AppCompatActivity(), TimePickerDialog.OnTimeSetListener, DatePickerDialog.OnDateSetListener, View.OnClickListener {
+
+    companion object{
+        // Global Calendar variable which will be manipulated by the user
+        var setCalendar: Calendar = Calendar.getInstance()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.add_reminder)
@@ -94,6 +100,8 @@ class AddReminderActivity: AppCompatActivity(), TimePickerDialog.OnTimeSetListen
             if(hourOfDay < 12) time.append("A.M.")
             else time.append("P.M.")
         }
+        setCalendar.set(Calendar.HOUR_OF_DAY, hourOfDay)
+        setCalendar.set(Calendar.MINUTE, minute)
         setTime.text = time
     }
 
@@ -110,7 +118,31 @@ class AddReminderActivity: AppCompatActivity(), TimePickerDialog.OnTimeSetListen
             date.append(", ")
             date.append(year)
         }
+        setCalendar.set(Calendar.YEAR, year)
+        setCalendar.set(Calendar.MONTH, month)
+        setCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth)
         setDate.text = date
+    }
+
+    override fun onClick(v: View?) {
+        when(v?.id){
+            R.id.addReminder_SubmitButton ->{
+                val titleTextBox: EditText = findViewById(R.id.addReminder_TitleTextBox)
+                if(titleTextBox.text.isBlank()){
+                    val noTitleError = Toast.makeText(applicationContext, "Title cannot be blank!", Toast.LENGTH_SHORT)
+                    noTitleError.show()
+                    return
+                }
+                val repeatingCheckBox: CheckBox = findViewById(R.id.addReminder_repeatingCheckBox)
+                if(!repeatingCheckBox.isChecked){
+                    setSimpleReminder()
+                    return
+                }
+                TODO("Check if RadioGroup has a \"no radio button is pressed\" function?")
+                val submitted = Toast.makeText(applicationContext, "Adding reminder...", Toast.LENGTH_SHORT)
+                submitted.show()
+            }
+        }
     }
 
     fun onCheckboxClicked(view: View){
@@ -118,7 +150,7 @@ class AddReminderActivity: AppCompatActivity(), TimePickerDialog.OnTimeSetListen
         val checked = (view as CheckBox).isChecked
         val rg: View = findViewById(R.id.addReminder_RadioGroup)
 
-        // Show Radio Group if checked, hide if not
+        // Show Radio Group and proper Linear Layout if checked, hide if not
         if(checked) {
             rg.visibility = VISIBLE
             val rbDOW: RadioButton = findViewById<RadioButton>(R.id.addReminder_RBDOW)
@@ -180,5 +212,9 @@ class AddReminderActivity: AppCompatActivity(), TimePickerDialog.OnTimeSetListen
         (findViewById<View>(R.id.addReminder_LinearLayoutNOW)).visibility = GONE
         (findViewById<View>(R.id.addReminder_LinearLayoutNOM)).visibility = GONE
         (findViewById<View>(R.id.addReminder_LinearLayoutNOY)).visibility = GONE
+    }
+
+    private fun setSimpleReminder(){
+        TODO("Create implementation!")
     }
 }
