@@ -37,4 +37,5 @@
     <string name="weeks">Weeks</string>
     <string name="months">Months</string>
     <string name="years">Years</string>
+    <string name="action_reminder">edu.cpp.4310.calclkrem.action.REMINDER</string>
 </resources>

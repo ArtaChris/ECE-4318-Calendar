@@ -184,6 +184,7 @@
 
     <LinearLayout
         android:id="@+id/addReminder_LinearLayoutNOD"
+        android:inputType="number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -314,7 +315,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <EditText
-            android:id="@+id/editTextNumber5"
+            android:id="@+id/addReminder_NOY_Input"
             android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
