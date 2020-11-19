@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSmoothScroller
 import androidx.recyclerview.widget.RecyclerView
-import com.ece4318.calendarview.CalendarView
+import edu.cpp4310.calclkrem.ui.calendar.CalendarView
 import edu.cpp4310.calclkrem.ui.calendar.model.CalendarDay
 import edu.cpp4310.calclkrem.ui.calendar.model.ScrollMode
 import edu.cpp4310.calclkrem.ui.calendar.utils.NO_INDEX

@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.ece4318.calendarview.CalendarView
+            <edu.cpp4310.calclkrem.ui.calendar.CalendarView
                 android:id="@+id/exThreeCalendar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

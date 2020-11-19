@@ -13,20 +13,21 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.AppCompatEditText
+import androidx.core.view.children
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import edu.cpp4310.calclkrem.R
+import edu.cpp4310.calclkrem.databinding.CalendarDayBinding
+import edu.cpp4310.calclkrem.databinding.CalendarFragmentBinding
+import edu.cpp4310.calclkrem.databinding.CalendarHeaderBinding
 import edu.cpp4310.calclkrem.ui.calendar.model.CalendarDay
 import edu.cpp4310.calclkrem.ui.calendar.model.CalendarMonth
 import edu.cpp4310.calclkrem.ui.calendar.model.DayOwner
 import edu.cpp4310.calclkrem.ui.calendar.ui.DayBinder
 import edu.cpp4310.calclkrem.ui.calendar.ui.MonthHeaderFooterBinder
 import edu.cpp4310.calclkrem.ui.calendar.ui.ViewContainer
-import com.ece4318.calendarviewsample.BaseFragment
-import com.ece4318.calendarviewsample.HasBackButton
-import com.ece4318.calendarviewsample.databinding.*
-import edu.cpp4310.databinding.*
-import edu.cpp4310.calclkrem.R
 import java.time.LocalDate
 import java.time.YearMonth
 import java.time.format.DateTimeFormatter
@@ -66,6 +67,7 @@ class EventsAdapter(val onClick: (Event) -> Unit) :
     }
 }
 
+@RequiresApi(Build.VERSION_CODES.O)
 class CalendarFragment : BaseFragment(R.layout.calendar_fragment), HasBackButton {
 
     private val eventsAdapter = EventsAdapter {
@@ -113,10 +115,14 @@ class CalendarFragment : BaseFragment(R.layout.calendar_fragment), HasBackButton
     override val titleRes: Int = R.string.calendar_title
 
     private var selectedDate: LocalDate? = null
+    @RequiresApi(Build.VERSION_CODES.O)
     private val today = LocalDate.now()
 
+    @RequiresApi(Build.VERSION_CODES.O)
     private val titleSameYearFormatter = DateTimeFormatter.ofPattern("MMMM")
+    @RequiresApi(Build.VERSION_CODES.O)
     private val titleFormatter = DateTimeFormatter.ofPattern("MMM yyyy")
+    @RequiresApi(Build.VERSION_CODES.O)
     private val selectionFormatter = DateTimeFormatter.ofPattern("d MMM yyyy")
     private val events = mutableMapOf<LocalDate, List<Event>>()
 
@@ -227,6 +233,7 @@ class CalendarFragment : BaseFragment(R.layout.calendar_fragment), HasBackButton
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     private fun selectDate(date: LocalDate) {
         if (selectedDate != date) {
             val oldDate = selectedDate
@@ -237,6 +244,7 @@ class CalendarFragment : BaseFragment(R.layout.calendar_fragment), HasBackButton
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     private fun saveEvent(text: String) {
         if (text.isBlank()) {
             Toast.makeText(requireContext(), R.string.empty_input_text, Toast.LENGTH_LONG).show()
@@ -248,12 +256,14 @@ class CalendarFragment : BaseFragment(R.layout.calendar_fragment), HasBackButton
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     private fun deleteEvent(event: Event) {
         val date = event.date
         events[date] = events[date].orEmpty().minus(event)
         updateAdapterForDate(date)
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     private fun updateAdapterForDate(date: LocalDate) {
         eventsAdapter.apply {
             events.clear()

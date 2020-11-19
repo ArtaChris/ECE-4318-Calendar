@@ -1,14 +1,18 @@
 package edu.cpp4310.calclkrem.ui.calendar.model
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import edu.cpp4310.calclkrem.ui.calendar.utils.next
 import edu.cpp4310.calclkrem.ui.calendar.utils.previous
 import edu.cpp4310.calclkrem.ui.calendar.utils.yearMonth
 import java.io.Serializable
 import java.time.LocalDate
 import java.time.YearMonth
+
 data class CalendarDay internal constructor(val date: LocalDate, val owner: DayOwner) :
     Comparable<CalendarDay>, Serializable {
 
+    @RequiresApi(Build.VERSION_CODES.O)
     val day = date.dayOfMonth
 
     // Find the actual month on the calendar that owns this date.

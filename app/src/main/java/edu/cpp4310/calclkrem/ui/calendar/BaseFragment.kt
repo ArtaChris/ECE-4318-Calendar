@@ -1,12 +1,10 @@
-package com.ece4318.calendarviewsample
+package edu.cpp4310.calclkrem.ui.calendar
 
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import edu.cpp4310.calclkrem.R
-import edu.cpp4310.calclkrem.ui.calendar.makeGone
-import edu.cpp4310.calclkrem.ui.calendar.makeVisible
 
 interface HasToolbar {
     val toolbar: Toolbar? // Return null to hide the toolbar

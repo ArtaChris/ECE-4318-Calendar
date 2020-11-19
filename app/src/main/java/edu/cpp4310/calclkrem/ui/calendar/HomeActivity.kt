@@ -1,4 +1,4 @@
-package com.ece4318.calendarviewsample
+package edu.cpp4310.calclkrem.ui.calendar
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.ece4318.calendarviewsample.databinding.HomeActivityBinding
+import edu.cpp4310.calclkrem.databinding.HomeActivityBinding
 import edu.cpp4310.calclkrem.R
 
 class HomeActivity : AppCompatActivity() {

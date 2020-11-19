@@ -1,4 +1,4 @@
-package com.ece4318.calendarview
+package edu.cpp4310.calclkrem.ui.calendar
 
 import android.content.Context
 import android.util.AttributeSet

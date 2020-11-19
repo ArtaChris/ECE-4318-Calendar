@@ -1,14 +1,13 @@
-package com.ece4318.calendarviewsample
+package edu.cpp4310.calclkrem.ui.calendar
 
+import android.os.Build
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.annotation.StringRes
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import edu.cpp4310.calclkrem.databinding.HomeOptionsItemViewBinding
 import edu.cpp4310.calclkrem.R
-import edu.cpp4310.calclkrem.ui.calendar.CalendarFragment
-import edu.cpp4310.calclkrem.ui.calendar.layoutInflater
-import com.ece4318.calendarviewsample.databinding.HomeActivityBinding
 
 data class ExampleItem(
     @StringRes val titleRes: Int,
@@ -18,6 +17,7 @@ data class ExampleItem(
 class HomeOptionsAdapter(val onClick: (ExampleItem) -> Unit) :
     RecyclerView.Adapter<HomeOptionsAdapter.HomeOptionsViewHolder>() {
 
+    @RequiresApi(Build.VERSION_CODES.O)
     val examples = listOf(
         ExampleItem(R.string.calendar_title) { CalendarFragment() },
     )

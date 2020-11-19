@@ -11,7 +11,7 @@ import androidx.annotation.LayoutRes
 import androidx.core.view.ViewCompat
 import androidx.core.view.updateLayoutParams
 import androidx.recyclerview.widget.RecyclerView
-import com.ece4318.calendarview.CalendarView
+import edu.cpp4310.calclkrem.ui.calendar.CalendarView
 import edu.cpp4310.calclkrem.ui.calendar.model.*
 import edu.cpp4310.calclkrem.ui.calendar.model.MonthConfig
 import edu.cpp4310.calclkrem.ui.calendar.utils.NO_INDEX

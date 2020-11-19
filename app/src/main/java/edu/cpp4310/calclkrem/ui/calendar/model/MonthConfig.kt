@@ -1,5 +1,7 @@
 package edu.cpp4310.calclkrem.ui.calendar.model
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import edu.cpp4310.calclkrem.ui.calendar.utils.next
 import kotlinx.coroutines.Job
 import java.time.DayOfWeek
@@ -18,6 +20,7 @@ internal data class MonthConfig(
         internal val job: Job
 ) {
 
+    @RequiresApi(Build.VERSION_CODES.O)
     internal val months: List<CalendarMonth> = run {
         return@run if (hasBoundaries) {
             generateBoundedMonths(startMonth, endMonth, firstDayOfWeek, maxRowCount, inDateStyle, outDateStyle, job)
@@ -35,6 +38,7 @@ internal data class MonthConfig(
          * less than 6. Each [CalendarMonth] will hold just enough [CalendarDay] instances(weekDays)
          * to fit in the [maxRowCount].
          */
+        @RequiresApi(Build.VERSION_CODES.O)
         fun generateBoundedMonths(
                 startMonth: YearMonth,
                 endMonth: YearMonth,
@@ -72,6 +76,7 @@ internal data class MonthConfig(
             return months
         }
 
+        @RequiresApi(Build.VERSION_CODES.O)
         internal fun generateUnboundedMonths(
                 startMonth: YearMonth,
                 endMonth: YearMonth,
@@ -175,6 +180,7 @@ internal data class MonthConfig(
         /**
          * Generates the necessary number of weeks for a [YearMonth].
          */
+        @RequiresApi(Build.VERSION_CODES.O)
         internal fun generateWeekDays(
             yearMonth: YearMonth,
             firstDayOfWeek: DayOfWeek,
