@@ -1,4 +1,4 @@
-package edu.cpp4310.calclkrem.ui.dashboard
+package edu.cpp4310.calclkrem.ui.clock
 
 import android.os.Bundle
 import android.view.LayoutInflater

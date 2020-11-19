@@ -1,4 +1,4 @@
-package edu.cpp4310.calclkrem.ui.dashboard
+package edu.cpp4310.calclkrem.ui.clock
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

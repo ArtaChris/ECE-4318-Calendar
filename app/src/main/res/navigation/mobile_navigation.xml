@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="edu.cpp4310.calclkrem.ui.home.HomeFragment"
+        android:name="edu.cpp4310.calclkrem.ui.calendar.CalendarFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/calendar_fragment" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="edu.cpp4310.calclkrem.ui.dashboard.DashboardFragment"
+        android:name="edu.cpp4310.calclkrem.ui.clock.DashboardFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
 
