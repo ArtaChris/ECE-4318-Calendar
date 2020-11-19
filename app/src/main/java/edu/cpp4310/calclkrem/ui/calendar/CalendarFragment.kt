@@ -22,6 +22,7 @@ import edu.cpp4310.calclkrem.R
 import edu.cpp4310.calclkrem.databinding.CalendarDayBinding
 import edu.cpp4310.calclkrem.databinding.CalendarFragmentBinding
 import edu.cpp4310.calclkrem.databinding.CalendarHeaderBinding
+import edu.cpp4310.calclkrem.databinding.EventItemViewBinding
 import edu.cpp4310.calclkrem.ui.calendar.model.CalendarDay
 import edu.cpp4310.calclkrem.ui.calendar.model.CalendarMonth
 import edu.cpp4310.calclkrem.ui.calendar.model.DayOwner
@@ -57,7 +58,7 @@ class EventsAdapter(val onClick: (Event) -> Unit) :
 
         init {
             itemView.setOnClickListener {
-                onClick(events[bindingAdapterPosition])
+                onClick(events[adapterPosition])
             }
         }
 
